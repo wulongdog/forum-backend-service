@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.4</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.fwf_bbs</groupId>
+    <artifactId>forum-backend-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>forum-backend-service</name>
+    <description>forum-backend-service</description>
+
+
+    <modules>
+        <module>forum-shiro</module>
+        <module>forum-admin</module>
+        <module>forum-common</module>
+        <module>forum-comment</module>
+        <module>forum-demo</module>
+        <module>forum-generator</module>
+        <module>forum-topic</module>
+        <module>forum-user</module>
+    </modules>
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <skipTests>true</skipTests>
+        <hutool.version>5.8.0</hutool.version><hutool.version>5.8.0</hutool.version>
+        <hibernate-core.version>5.0.7.Final</hibernate-core.version>
+        <pagehelper-starter.version>1.4.2</pagehelper-starter.version>
+        <pagehelper.version>5.3.0</pagehelper.version>
+        <druid.version>1.2.9</druid.version>
+        <mybatis-plus-generator.version>3.5.2</mybatis-plus-generator.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <mysql-connector.version>8.0.29</mysql-connector.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <mapstruct-processor.version>1.4.2.Final</mapstruct-processor.version>
+        <spring-data-commons.version>2.7.0</spring-data-commons.version>
+        <springfox-boot-starter.version>3.0.0</springfox-boot-starter.version>
+        <spring-boot-starter-validation.version>2.7.4</spring-boot-starter-validation.version>
+        <shiro.version>1.8.0</shiro.version>
+        <velocity-engine-core.version>2.3</velocity-engine-core.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <logstash-logback.version>7.2</logstash-logback.version>
+        <forum-common.version>0.0.1-SNAPSHOT</forum-common.version>
+        <forum-generator.version>0.0.1-SNAPSHOT</forum-generator.version>
+        <forum-shiro.version>0.0.1-SNAPSHOT</forum-shiro.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate-core.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
