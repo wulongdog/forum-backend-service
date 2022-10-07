@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.jsontype.impl.LaissezFaireSubTypeValidator;
 import com.fwf_bbs.forumcommon.service.RedisService;
 import com.fwf_bbs.forumcommon.service.impl.RedisServiceImpl;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnSingleCandidate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
@@ -30,6 +31,7 @@ import java.time.Duration;
 public class BaseRedisConfig {
 
     @Bean
+    @ConditionalOnSingleCandidate(RedisConnectionFactory.class)
     public RedisTemplate<String,Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
         RedisSerializer<Object> serializer = redisSerializer();
         RedisTemplate<String,Object> redisTemplate = new RedisTemplate<>();
@@ -55,6 +57,7 @@ public class BaseRedisConfig {
     }
 
     @Bean
+    @ConditionalOnSingleCandidate(RedisConnectionFactory.class)
     public RedisCacheManager redisCacheManager(RedisConnectionFactory redisConnectionFactory) {
         RedisCacheWriter redisCacheWriter = RedisCacheWriter.nonLockingRedisCacheWriter(redisConnectionFactory);
         //设置Redis缓存有效期为1天

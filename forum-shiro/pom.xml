@@ -23,10 +23,10 @@
             <version>${forum-common.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-web</artifactId>-->
+<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core -->
         <dependency>
             <groupId>org.apache.shiro</groupId>

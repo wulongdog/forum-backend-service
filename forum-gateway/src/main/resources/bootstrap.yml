@@ -1,0 +1,15 @@
+#spring:
+#  cloud:
+#    config:
+#      profile: ${spring.profiles.active}
+#      label: ${spring.profiles.active}
+#      fail-fast: true
+#      discovery:
+#        service-id: forum-config
+#        enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}

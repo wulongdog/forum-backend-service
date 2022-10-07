@@ -1,0 +1,19 @@
+server:
+  port: 8003
+spring:
+  profiles:
+    active: dev
+  application:
+    name: @pom.artifactId@
+
+swagger:
+  title: @pom.artifactId@
+  description: @pom.description@
+
+
+zuul:
+  routes:
+    user-route:
+      service-id: forum-provider-user
+      path: /user/**
+

@@ -25,6 +25,15 @@ import java.util.Map;
 public class ShiroConfig {
 
     /**
+     * 创建自定义realm
+     * @return
+     */
+    @Bean(name="ShiroRealm")
+    public ShiroRealm getRealm(){
+        return new ShiroRealm(new ShiroMatcher());
+    }
+
+    /**
      * shiro过滤器工厂
      * @param securityManager
      * @return
@@ -66,25 +75,17 @@ public class ShiroConfig {
 
     /**
      * 创建 DefaultWebSecurityManager
-     * @param shiroRealm
+//     * @param shiroRealm
      * @return
      */
     @Bean(name="securityManager")
-    public DefaultWebSecurityManager getdefaultDefaultWebSecurityManager(@Qualifier("demoRealm") ShiroRealm shiroRealm){
+    public DefaultWebSecurityManager getdefaultDefaultWebSecurityManager(/*@Qualifier("ShiroRealm") ShiroRealm shiroRealm*/){
         DefaultWebSecurityManager securityManager=new DefaultWebSecurityManager();
         //关联Realm
-        securityManager.setRealm(shiroRealm);
+        securityManager.setRealm(getRealm());
         return securityManager;
     }
 
-    /**
-     * 创建自定义realm
-     * @return
-     */
-    @Bean(name="demoRealm")
-    public ShiroRealm getRealm(){
-        return new ShiroRealm(new ShiroMatcher());
-    }
 
 
     /**

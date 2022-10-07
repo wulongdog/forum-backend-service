@@ -1,0 +1,10 @@
+server:
+  port: 8002
+
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: forum-config
+#    name: @pom.artifactId@

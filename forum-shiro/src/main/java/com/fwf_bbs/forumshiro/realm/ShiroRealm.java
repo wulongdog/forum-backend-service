@@ -12,6 +12,7 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.stereotype.Component;
 
 /**
  * @className DemoRealm
@@ -19,6 +20,7 @@ import org.apache.shiro.subject.PrincipalCollection;
  * @auther wulongdog
  * @date 2022/10/4  14:08
  */
+@Component
 public class ShiroRealm extends AuthorizingRealm {
 
     public ShiroRealm(CredentialsMatcher matcher) {

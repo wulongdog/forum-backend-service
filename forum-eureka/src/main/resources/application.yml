@@ -1,0 +1,9 @@
+server:
+  port: 8001
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: forum-eureka
+#    name: @pom.artifactId@
