@@ -79,10 +79,10 @@ public class ShiroConfig {
      * @return
      */
     @Bean(name="securityManager")
-    public DefaultWebSecurityManager getdefaultDefaultWebSecurityManager(/*@Qualifier("ShiroRealm") ShiroRealm shiroRealm*/){
+    public DefaultWebSecurityManager getdefaultDefaultWebSecurityManager(@Qualifier("ShiroRealm") ShiroRealm shiroRealm){
         DefaultWebSecurityManager securityManager=new DefaultWebSecurityManager();
         //关联Realm
-        securityManager.setRealm(getRealm());
+        securityManager.setRealm(shiroRealm);
         return securityManager;
     }
 

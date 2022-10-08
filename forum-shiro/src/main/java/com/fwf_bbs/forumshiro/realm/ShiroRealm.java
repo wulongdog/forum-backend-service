@@ -12,6 +12,7 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -23,6 +24,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ShiroRealm extends AuthorizingRealm {
 
+    @Autowired
     public ShiroRealm(CredentialsMatcher matcher) {
         super(matcher);
     }
@@ -47,7 +49,7 @@ public class ShiroRealm extends AuthorizingRealm {
 
         //设置用户
         if(jwtMeg.getUid()!=null) {
-            info.addRole(String.valueOf(jwtMeg.getUrole()));
+            info.addRole("user");
         }
         //如有需要在这设置操作权限
 
