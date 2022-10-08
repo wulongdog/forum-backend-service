@@ -18,7 +18,6 @@
 
     <modules>
         <module>forum-shiro</module>
-        <module>forum-admin</module>
         <module>forum-common</module>
         <module>forum-eureka</module>
         <module>forum-generator</module>
@@ -222,12 +221,6 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-feign</artifactId>
-                <version>1.4.7.RELEASE</version>
-            </dependency>
-            <!--导入Hystrix依赖-->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-hystrix</artifactId>
                 <version>1.4.7.RELEASE</version>
             </dependency>
             <dependency>

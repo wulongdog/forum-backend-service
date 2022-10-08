@@ -23,6 +23,7 @@
         <module>forum-provider-demo-api</module>
         <module>forum-provider-topic-api</module>
         <module>forum-provider-user-api</module>
+        <module>forum-provider-admin-api</module>
     </modules>
 
     <dependencies>

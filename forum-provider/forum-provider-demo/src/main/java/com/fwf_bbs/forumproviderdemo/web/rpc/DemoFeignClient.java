@@ -19,6 +19,6 @@ public class DemoFeignClient implements DemoFeignApi {
     @Override
     @ApiOperation("DemoFeign")
     public CommonResult<String> getDemo() {
-        return null;
+        return CommonResult.success("调用测试");
     }
 }

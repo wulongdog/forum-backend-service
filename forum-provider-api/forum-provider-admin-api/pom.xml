@@ -3,32 +3,32 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.fwf_bbs</groupId>
-    <artifactId>forum-provider-user</artifactId>
+    <artifactId>forum-provider-admin-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>forum-provider-user</name>
-    <description>forum-provider-user</description>
+    <name>forum-provider-admin-api</name>
+    <description>forum-provider-admin-api</description>
+    <packaging>jar</packaging>
     <properties>
         <java.version>17</java.version>
     </properties>
-
     <parent>
-        <artifactId>forum-provider</artifactId>
+        <artifactId>forum-provider-api</artifactId>
         <groupId>com.fwf_bbs</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <packaging>jar</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>com.fwf_bbs</groupId>
-            <artifactId>forum-provider-user-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fwf_bbs</groupId>
-            <artifactId>forum-provider-demo-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+    <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix -->
+    <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        <version>2.2.10.RELEASE</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
     </dependencies>
 
     <build>

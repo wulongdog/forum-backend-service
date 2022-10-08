@@ -14,4 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/demo")
 @Api
 public class DemoController {
+
+    @RequestMapping("/test")
+    public String demoTest(){
+        return "hello world";
+    }
 }

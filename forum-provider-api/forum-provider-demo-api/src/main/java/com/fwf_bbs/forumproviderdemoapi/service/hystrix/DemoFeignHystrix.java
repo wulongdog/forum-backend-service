@@ -14,6 +14,6 @@ import org.springframework.stereotype.Component;
 public class DemoFeignHystrix implements DemoFeignApi {
     @Override
     public CommonResult<String> getDemo() {
-        return null;
+        return CommonResult.failed("服务中断");
     }
 }

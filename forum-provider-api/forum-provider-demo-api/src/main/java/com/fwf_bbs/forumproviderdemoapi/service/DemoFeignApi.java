@@ -1,7 +1,9 @@
 package com.fwf_bbs.forumproviderdemoapi.service;
 
 import com.fwf_bbs.forumcommon.api.CommonResult;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -11,8 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @date 2022/10/7  22:14
  */
 @FeignClient(value = "forum-provider-demo")
+@Component
+@Service
 public interface DemoFeignApi {
 
-    @RequestMapping("/demo/test")
+    @RequestMapping("/demo/Feigntest")
     public CommonResult<String> getDemo();
 }
