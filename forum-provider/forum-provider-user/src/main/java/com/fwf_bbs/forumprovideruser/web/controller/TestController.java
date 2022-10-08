@@ -26,4 +26,8 @@ public class TestController {
         return demoFeign.getDemo();
     }
 
+    @RequestMapping("/get")
+    public CommonResult<Object> get() {
+        return CommonResult.success(demoFeign.getNote());
+    }
 }

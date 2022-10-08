@@ -16,4 +16,9 @@ public class DemoFeignHystrix implements DemoFeignApi {
     public CommonResult<String> getDemo() {
         return CommonResult.failed("服务中断");
     }
+
+    @Override
+    public CommonResult<Object> getNote() {
+        return CommonResult.failed("服务中断");
+    }
 }

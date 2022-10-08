@@ -12,6 +12,6 @@ public class DemoGenerator {
 
     public static void main(String[] args) {
 
-        new Generator("jdbc:mysql://120.25.125.57:3306/blog?useUnicode=true&useSSL=false&characterEncoding=utf8","root","1346798520lhy","forum-demo",new String[]{"t_note"}).action();
+        new Generator("jdbc:mysql://120.25.125.57:3306/blog?useUnicode=true&useSSL=false&characterEncoding=utf8","root","1346798520lhy","forum-provider-demo",new String[]{"t_note"}).action();
     }
 }
